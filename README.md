@@ -45,4 +45,4 @@ The `env.bat` file is ignored by Git.
 
 ## Running the Project
 
-To run the project on localhost use the command `uvicorn main:app --reload`.
+To run the project on localhost, on port 8000, use the command `uvicorn main:app --reload`. A new process will then start running on `http://127.0.0.1:8000`.
