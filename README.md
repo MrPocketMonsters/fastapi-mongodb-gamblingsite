@@ -2,7 +2,26 @@
 
 This is my first time using FastAPI and MongoDB. With this project, I aim to understand and have a first approach to these tools. It will also help as a first approach to documentation for a project.
 
-## How to install this project.
+## What's up with the "Gambling" thing?
+
+The proposed system was that of a Database API Service for a Gambling site that allows:
+* Create and edit users with
+    * Name
+    * Age
+    * Balance
+    * Bet History
+* Manage Sports Event Information
+* Adding and removing funds
+* Check of funds before moving them
+* Query open events and selecting bet type
+* Logic for processing results and solving open bets moving funds
+* Personal statistics endpoint
+    * Winning bets percentage
+    * Total won bets
+    * Total lost bets
+    * Most common type of events
+
+## How to install this project
 
 This project runs on [Python 3.11.10](https://www.python.org/downloads/release/python-31110/), so the first thing is getting it.
 
@@ -16,3 +35,14 @@ This will install on your PC:
     * The FastAPI library for RestAPIs.
     * The Uvicorn Web Server.
     * Dependencies for these libraries.
+
+## Environment Variables
+
+This project was made using the MongoDB cloud service *Atlas*. The `env.bat-example` files contains a `set` instruction for the variable `MONGODB_URI`, which is a URI that grants access to some database running MongoDB.
+1. Copy the `env.bat-example` file to `env.bat`.
+The `env.bat` file is ignored by Git.
+2. Replace the value for the `MONGODB_URI` variable with a valid URI that grants access to some MongoDB database.
+
+## Running the Project
+
+To run the project on localhost use the command `uvicorn main:app --reload`.
