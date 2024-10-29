@@ -38,11 +38,11 @@ This will install on your PC:
 
 ## Environment Variables
 
-This project was made using the MongoDB cloud service *Atlas*. The `env.bat-example` files contains a `set` instruction for the variable `MONGODB_URI`, which is a URI that grants access to some database running MongoDB.
-1. Copy the `env.bat-example` file to `env.bat`.
-The `env.bat` file is ignored by Git.
+This project was made using the MongoDB cloud service *Atlas*. The `envvar-example` file contains an `export` instruction for the variable `MONGODB_URI`, which is an URI that grants access to some database running MongoDB.
+1. Copy the `envvar-example` file to `envvar`.
+The `envvar` file is ignored by Git.
 2. Replace the value for the `MONGODB_URI` variable with a valid URI that grants access to some MongoDB database.
 
 ## Running the Project
 
-To run the project on localhost, on port 8000, run the `env.bat` file to load the environment variables to the current terminal session, then use the command `uvicorn main:app --reload`. A new process will then start running on `http://127.0.0.1:8000`.
+To run the project on localhost, on port 8000, use the `source envvar` command to load the environment variables to the current terminal session, then use the command `uvicorn main:app --reload`. A new process will then start running on `http://127.0.0.1:8000`.
